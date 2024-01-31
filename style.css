@@ -1,0 +1,14 @@
+#btnKereses{
+    margin-left:1.8%;
+    border-radius: 15rem;
+}
+body{
+    background-color: lightpink;
+    justify-content: center;
+    display: flex;
+    margin-top: 8rem;
+}
+
+#omInput{
+    border-radius: 25rem;
+}
