@@ -9,14 +9,23 @@
 </head>
 <body>
     <div>
-        <span>OM:</span>
+        <span id="szoveg">OM:</span>
         <input type="text" id="omInput" placeholder="OM azonosító">
     </div>
     <div>
         <button id="btnKereses" onclick="Keres()">Keresés</button>
     </div>
-    <div>
-
+    <div class="tablazatDiv">
+        <table id="tablazat">
+            <tr>
+                <th id="OM"></th>
+                <th id="Nev"></th>
+                <th id="Email"></th>
+                <th id="Lakcim"></th>
+                <th id="Matek"></th>
+                <th id="Magyar"></th>
+            </tr>
+        </table>
     </div>
 
 </body>

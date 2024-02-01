@@ -188,16 +188,38 @@ var adatok = [
 
 
       if (regex.test(keresesErteke)) {
-          //alert("Match found!");
           if (keresesErteke.length == 11) {
 
-            //beolvas
-            
+            var foundData = adatok.find(function (item) {
+              return item.OM_Azonosito === keresesErteke;
+          });
+
+          if (foundData) {
+              // Populate the table with the found data
+              var table = document.getElementById("tablazat");
+              table.innerHTML = "<tr><th>OM</th><th>Név</th><th>Email</th><th>Lakcim</th><th>Matek</th><th>Magyar</th></tr>";
+              var row = table.insertRow(1);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              var cell4 = row.insertCell(3);
+              var cell5 = row.insertCell(4);
+              var cell6 = row.insertCell(5);
+              cell1.innerHTML = foundData.OM_Azonosito;
+              cell2.innerHTML = foundData.Neve;
+              cell3.innerHTML = foundData.Email;
+              cell4.innerHTML = foundData.ErtesitesiCime;
+              cell5.innerHTML = foundData.Matematika;
+              cell6.innerHTML = foundData.Magyar;
+
+              alert("Sikeres találat!")
           }
+          else{alert("Nem található ilyen OM azonosító")}
+        }
           else {
-              alert("Nem 11"); 
+              alert("Nem 11 szám szerepel a keresési mezőben."); 
           }
       } else {
-          alert("Nem szám");
+          alert("Nem szám vagy tartalmaz karaktert is.",);
       }
   }
