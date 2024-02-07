@@ -1,52 +1,57 @@
 body {
-    background-color: #2d3a3a; /* Updated background color 2d3a3a*/
-    color: black; /* Text color */
-    font-family: Arial, sans-serif; /* Use a common font for better readability */
+    background-color: #2d3a3a;
+    color: black; 
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0; /* Remove default body margin */
+    margin: 0;
 }
 
-#szoveg{
+#szoveg {
     color: #4CAF50;
     text-shadow: 6px 6px 10px black;
     font-weight: bold;
 }
 
-#btnKereses {
-    
-    border-radius: 0.5rem; /* Adjusted border radius */
-    padding: 8px 16px; /* Added padding for better button appearance */
-    background-color: #6e8f6f; /* Button background color */
-    color: white; /* Button text color */
+#btnKereses, #omInput {
+    border-radius: 0.5rem;
+    padding: 8px 16px;
     cursor: pointer;
+}
+
+#btnKereses {
+    background-color: #6e8f6f; 
+    color: white;
     margin-left: 1rem;
 }
 
 #omInput {
-    border-radius: 0.5rem;
     margin-left: 0;
-    padding: 8px;
-    background-color: #2d3a3a; /* Input background color */
-    color: #fff; /* Input text color */
+    background-color: #2d3a3a;
+    color: #fff;
+    margin-bottom: 20rem;
 }
 
-#omInput::placeholder{
+#omInput::placeholder {
     font-style: italic;
 }
 
 #tablazat {
-    width: 80%; /* Adjusted table width */
+    width: 80%; 
     margin-top: 0px;
     margin-left: 1rem;
     background-color: #f0f0f0;
     border-radius: 0.5rem;
-    overflow: hidden; /* Hide overflow for better appearance */
+    overflow: hidden;
+    position: relative;
+    right: 20rem;
+    bottom: 8rem;
 }
 
-#tablazat th, #tablazat td {
+#tablazat th, 
+#tablazat td {
     border: 1px solid #dddddd;
     padding: 12px;
     text-align: left;
@@ -65,3 +70,9 @@ body {
 #tablazat tr:hover {
     background-color: #f2f2f2;
 }
+
+#tologatosdi {
+    position: relative;
+    bottom: 15rem;
+}
+
