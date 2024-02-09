@@ -1,3 +1,4 @@
+"use strict"
 var adatok = [
   {
     "OM_Azonosito": "78655218932",
@@ -36,7 +37,7 @@ var adatok = [
     "Magyar": 47
   },
   {
-    "OM_Azonosito": "88765031624",
+    "OM_Azonosito": "28765031624",
     "Neve": "Horváth Eszter",
     "ErtesitesiCime": "Székesfehérvár, Bartók Béla út 12.",
     "Email": "eszter@example.com",
@@ -179,7 +180,6 @@ var adatok = [
     "Matematika": 18,
     "Magyar": 10
   }]
-// Add input event listener to the OM input field
 document.getElementById("omInput").addEventListener("input", function() {
   if (this.value.length && this.value.match(/^\d+$/)) {
     Keres();
@@ -190,16 +190,13 @@ document.getElementById("omInput").addEventListener("input", function() {
   }
 });
 
-// Define the Keres function
 function Keres() {
   var keresesErteke = document.getElementById("omInput").value;
 
-  // Filter the adatok array to find all matches
   var matchingAdatok = adatok.filter(function (item) {
     return item.OM_Azonosito.startsWith(keresesErteke);
   });
 
-  // Display the matching data in the table
   var table = document.getElementById("tablazat");
   table.innerHTML = "<tr><th>OM</th><th>Név</th><th>Email</th><th>Lakcim</th><th>Matek</th><th>Magyar</th></tr>";
 
@@ -219,7 +216,6 @@ function Keres() {
     cell6.innerHTML = item.Magyar;
   });
 
-  // Compute and display the statistics
   if (matchingAdatok.length) {
     document.getElementById("statisztika").style.display = "block";
     var matchCount = document.getElementById("matchCount");
@@ -235,11 +231,10 @@ function Keres() {
     document.getElementById("statisztika").style.display = "none";
   }
 
-  function average(numbers) {
-    return numbers.reduce(function (sum, number) {
+  function average(Atlag) {
+    return Atlag.reduce(function (sum, number) {
       return sum + number;
-    }, 0) / numbers.length;
+    }, 0) / Atlag.length;
   }
 }
 
-// Define the adatok array
